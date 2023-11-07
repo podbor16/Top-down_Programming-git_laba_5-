@@ -16,10 +16,15 @@ def analysis_text(text):
     return result
 
 def hand_text():
-    return
+    text = input("Введите текст: ")
+    print("Вы ввели следующий текст:")
+    print(text)
+    return text
 
 def auto_text():
-    return
+    text = lorem.paragraph()
+    print(text)
+    return text
 
 def menu():
     text = ""
@@ -32,9 +37,11 @@ def menu():
         choose = input("Выберите пункт меню: ")
 
         if choose == "1":
-            pass
+            text = hand_text()
+            input('Нажмите Enter, чтобы продолжить...')
         elif choose == "2":
-            pass
+            text = auto_text()
+            input("Нажмите Enter, чтобы продолжить...")
         elif choose == "3":
             result = analysis_text(text)
             for symbol, frequency in result:
